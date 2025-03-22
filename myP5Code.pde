@@ -1,29 +1,38 @@
-//🟢setup Function - will run once
 setup = function() {
-    size(600, 400);
-    background(255,255,255,0);
-    
-    drawFish(200, 200, color(200,0,200)); 
-    drawFish(300, 200, color(0,200,200));
+    size(400, 400);
 };
 
-//🟢draw Function - will run on repeat
+var answer = 1;
+
 draw = function(){
-
+  background(100,100,100);
+  fill(0, 0, 0);
+  ellipse(200, 200, 375, 375);
+  fill(60, 0, 255);
+  triangle(200, 104, 280, 280, 120, 280);
+  fill(255, 255, 255);
+  
+  if (answer == 1) {
+    text("MEOW NO", 170, 200);
+  
+  }
+  if (answer == 2) {
+  text("guess", 176, 200)
+  }
+   if (answer == 3) {
+  text("good job", 176, 200)
+  }
+   if (answer == 4) {
+  text("perchance", 176, 200)
+  }
+   if (answer == 5) {
+  text("yes of course!", 167, 200)
+  } 
 };
 
-//🟢mouseClicked Function - will run when mouse is clicked
 mouseClicked = function(){
-
-}
-
-//🟡drawFish Function - will run when called
-var drawFish = function(fishX, fishY, fishColor){
-  textSize(80);
-  fill(fishColor);
-  text("𓆝", fishX, fishY);
+  answer = round(random(1, 5));
 };
-
 
 
 
